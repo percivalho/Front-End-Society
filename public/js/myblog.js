@@ -18,7 +18,7 @@ const submitUpdateHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace(`/dashboard`);
+        document.location.replace(`/myPlaylist`);
       } else {
         alert('Failed to update blog.');
       }
@@ -38,7 +38,7 @@ const submitUpdateHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace(`/dashboard`);
+      document.location.replace(`/myPlaylist`);
     } else {
       alert('Failed to delete blog.');
     }

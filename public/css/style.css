@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  background: #13293d;
+}
+
+nav a {
+  color: #fff;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+section {
+  flex: 3;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.sample-img {
+  background-color: #fff;
+  width: 100%;
+  padding: 0;
+  border: 5px solid black;
+}
+
+.sample-img p {
+  padding-left: 20px; /* Add padding to the left side */
+  margin-bottom:10px;  
+}
+
+/* Make the textarea stretch to both sides */
+.sample-img .form-group textarea {
+  width: 100%;
+}
+
+/* Make the submit button stretch to both sides */
+.sample-img .form-group button {
+  width: 100%;
+}
+
+
+/* that is the title bar, white font and dark blue background*/
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;    
+  background-color: #13293d; /* Background color for the header */
+  color: #fff; /* Font color for the header */
+  padding: 10px;  
+}
+
+.title h2 {
+  margin: 0;
+  font-size: 30px; 
+}
+
+.title p{
+  padding-right: 10px;  
+
+}
+
+/* form stack column-wise*/
+.sample-img form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sample-img label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.sample-img input[type="text"],
+.sample-img input[type="password"] {
+  padding: 8px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.sample-img input[type="submit"] {
+  padding: 8px 16px;
+  background-color: #13293d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* effect on button hover */
+.sample-img input[type="submit"]:hover {
+  background-color: #1e3d5a;
+}
+
+.sample-img p {
+  margin-top: 10px;
+}
+
+.sample-img a {
+  color: #13293d;
+  text-decoration: none;
+}
+
+.sample-img a:hover {
+  text-decoration: underline;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* new post button on the lower right-hand corner*/
+.new-post-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #13293d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* effect on hover on button*/
+.new-post-button:hover {
+  background-color: #1e3d5a;
+}
+
+/* default: no underline for <a> link*/
+a {
+  text-decoration: none;
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+/* on hover: add underline*/
+.card a:hover {
+  color: green; 
+  text-decoration: underline; 
+}
+
+/* for username and password, make them display center */
+.input-container {
+  display: flex;
+  justify-content: center;  
+}
+
+@media screen and (max-width: 768px) {
+  /* Use flex-direction to stack the navbar, sidebar, and body */
+  main,
+  nav {
+    flex-direction: column;
+  }
+  /* Make the sidebar stack below the body */
+  aside {
+    order: 2;
+  }
+  /* Change the header background */
+  header {
+    background: #772014;
+  }
+  /* Change the navbar and footer background */
+  nav,
+  footer {
+    background-color: #bb8588;
+  }
+}
+
+

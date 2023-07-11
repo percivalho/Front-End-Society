@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "description": "Great post, thanks for sharing!",
+        "blog_id": 1,
+        "user_id": 2
+    },
+    {
+        "id": 2,
+        "description": "This is really informative. Looking forward to more such posts.",
+        "blog_id": 1,
+        "user_id": 3
+    },
+    {
+        "id": 3,
+        "description": "I learned a lot from this post. Thanks!",
+        "blog_id": 2,
+        "user_id": 1
+    },
+    {
+        "id": 4,
+        "description": "This clarified many of my doubts. Appreciate it.",
+        "blog_id": 3,
+        "user_id": 4
+    },
+    {
+        "id": 5,
+        "description": "Well explained and easy to understand. Good job!",
+        "blog_id": 4,
+        "user_id": 4
+    },
+    {
+        "id": 6,        
+        "description": "Great post! I learned a lot about full stack development.",
+        "blog_id": 5,
+        "user_id": 1
+    },
+    {
+        "id": 7,        
+        "description": "I have a question about backend technologies. Can you recommend a good resource to learn more?",
+        "blog_id": 6,
+        "user_id": 2
+    },
+    {
+        "id": 8,        
+        "description": "Thanks for sharing this insightful information about frontend frameworks.",
+        "blog_id": 7,
+        "user_id": 3
+    }
+  ]
+  

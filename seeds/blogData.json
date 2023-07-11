@@ -1,0 +1,45 @@
+[
+
+  {
+    "id": 1,
+    "title": "The Beginners Guide to Node.js",
+    "description": "This blog post introduces the basics of Node.js and how to get started.",
+    "user_id": 1
+  },
+  {
+    "id": 2,
+    "title": "Understanding Sequelize ORM",
+    "description": "A deep dive into the Sequelize Object-Relational Mapping (ORM) library for Node.js.",
+    "user_id": 2
+  },
+  {
+    "id": 3,
+    "title": "Exploring JavaScript ES6 Features",
+    "description": "In this blog post, we will explore some of the most powerful features of the ES6 JavaScript update.",
+    "user_id": 3
+  },
+  {
+    "id": 4,
+    "title": "Diving into Express.js Middlewares",
+    "description": "Express.js middlewares represent a powerful feature of the Express.js framework. In this post, we explain how they work and how to use them.",
+    "user_id": 4
+  },
+  {
+    "id": 5,    
+    "title": "Introduction to Full Stack Development",
+    "description": "In this blog post, we will explore the fundamentals of full stack development and its importance in modern web development.",
+    "user_id": 1
+  },
+  {
+    "id": 6,    
+    "title": "Backend Technologies for Full Stack Development",
+    "description": "Learn about popular backend technologies used in full stack development, including Node.js, Express.js, and databases like MySQL or MongoDB.",
+    "user_id": 2
+  },
+  {
+    "id": 7,    
+    "title": "Frontend Frameworks for Full Stack Development",
+    "description": "Discover frontend frameworks like React, Angular, and Vue.js that enable efficient full stack development by building dynamic user interfaces.",
+    "user_id": 3
+  }
+]

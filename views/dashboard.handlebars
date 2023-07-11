@@ -1,0 +1,29 @@
+{{#each blogs as |blog|}}
+{{> myblog-details}}
+{{/each}}
+
+<article class="sample-img d-none">
+    <div class="title">
+    <h2>Create new Post</h2>
+    </div>
+    <form class="form" id="create">
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <textarea class="form-control" rows="1" id="title"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="content">Content:</label>
+        <textarea class="form-control" rows="5" id="description"></textarea>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Create</button>
+    </div>
+    </form>            
+</article>
+
+
+<section>
+      <button class="new-post-button">+ New Post</button>      
+</section>
+
+<script src="/js/dashboard.js"></script>

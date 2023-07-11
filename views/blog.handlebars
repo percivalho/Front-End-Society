@@ -1,0 +1,26 @@
+<section class="card">
+  <header>{{blog.title}}</header>
+  <p>{{blog.description}}</p>
+</section>
+
+{{#each blog.comments as |comment|}}
+{{> comment-details}}
+{{/each}}
+
+<article class="sample-img">
+  <div class="title">
+  </div>
+  <div class="detail">
+    <p>Comment</p>
+    <form class="form comment-form">
+      <div class="form-group">
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>            
+  </div>
+</article>
+
+<script src="/js/comment.js"></script>

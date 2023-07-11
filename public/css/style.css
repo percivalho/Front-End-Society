@@ -103,7 +103,7 @@ section {
 
 .sample-img input[type="submit"] {
   padding: 8px 16px;
-  background-color: #13293d;
+  background-color: #B6207F;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -111,7 +111,7 @@ section {
 
 /* effect on button hover */
 .sample-img input[type="submit"]:hover {
-  background-color: #1e3d5a;
+  background-color: #B6207F;
 }
 
 .sample-img p {

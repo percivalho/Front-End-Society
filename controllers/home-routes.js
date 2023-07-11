@@ -95,8 +95,8 @@ router.post('/api/blog/:id', withAuth, async (req, res) => {
   }
 });
 
-// Dashboard
-router.get('/dashboard', withAuth, async (req, res) => {
+// myPlaylist
+router.get('/myPlaylist', withAuth, async (req, res) => {
   try {
     // find  the user.id from username
     const dbUserData = await User.findOne({
@@ -119,7 +119,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
             blog.get({ plain: true })
           );
         }
-        res.render('dashboard', { blogs, loggedIn: req.session.loggedIn });
+        res.render('myPlaylist', { blogs, loggedIn: req.session.loggedIn });
       } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -132,7 +132,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 });
 
 // Create Blog Post
-router.post('/dashboard', withAuth, async (req, res) => {
+router.post('/myPlaylist', withAuth, async (req, res) => {
   try {
     // retrieve the user.id from username
     const dbUserData = await User.findOne({

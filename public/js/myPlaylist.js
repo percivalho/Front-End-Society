@@ -12,7 +12,7 @@ const submitBlogHandler = async (event) => {
     const title = document.querySelector('#title').value.trim();
     const description = document.querySelector('#description').value.trim();
     if (title && description) {
-      const response = await fetch(`/dashboard`, {
+      const response = await fetch(`/myPlaylist`, {
         method: 'POST',
         body: JSON.stringify({
             title: title,
@@ -22,7 +22,7 @@ const submitBlogHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace(`/dashboard`);
+        document.location.replace(`/myPlaylist`);
       } else {
         alert('Failed to add blog.');
       }

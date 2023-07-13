@@ -9,6 +9,7 @@ router.post('/signup', async (req, res) => {
     const dbUserData = await User.create({
       username: req.body.username,
       password: req.body.password,
+      sound: "Ping1.mp3",
     });
     console.log(dbUserData)
     req.session.save(() => {
@@ -49,10 +50,12 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password. Please try again!' });
       return;
     }
-
+    console.log(dbUserData)
     req.session.save(() => {
       req.session.loggedIn = true;
       req.session.username = req.body.username;
+      req.session.sound = dbUserData.sound;
+
 
       // redirect to / on successful login
       res.redirect('/');        

@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,        
+        "name": "Eyes closed",
+        "genre": "Pop",
+        "songlink": "07bsRv0pcpbG4zJeLsUs1p",
+        "artist_id": 1
+    },
+    {
+        "id": 2,
+        "name": "Perfect",
+        "genre": "Pop",
+        "songlink": "0tgVpDi06FyKpA1z0VMD4v",
+        "artist_id": 1
+    },
+    {
+        "id": 3,
+        "name": "Bad Guy",
+        "genre": "Pop",
+        "songlink": "2Fxmhks0bxGSBdJ92vM42m",
+        "artist_id": 2
+    },
+    {
+        "id": 4,        
+        "name": "No Time To Die",
+        "genre": "Alternative/Indie",
+        "songlink": "73SpzrcaHk0RQPFP73vqVR",
+        "artist_id": 2
+    },
+    {
+        "id": 5,        
+        "name": "thank u, next",
+        "genre": "Pop",
+        "songlink": "3e9HZxeyfWwjeyPAMmWSSQ",
+        "artist_id": 3
+    },
+    {
+        "id": 6,
+        "name": "7 rings",
+        "genre": "Pop",
+        "songlink": "6ocbgoVGwYJhOv1GgI9NsF",
+        "artist_id": 3
+    },
+    {
+        "id": 7,
+        "name": "Wish you the best",
+        "genre": "Pop",
+        "songlink": "3gdPwk2wyOXNRnTA1KXnEr",
+        "artist_id": 12
+    },
+    {
+        "id": 8,
+        "name": "Wish you the best",
+        "genre": "Pop",
+        "songlink": "7qEHsqek33rTcFNT9PFqLf",
+        "artist_id": 12
+    },
+    {
+        "id": 9,
+        "name": "Cruel Summer",
+        "genre": "Pop",
+        "songlink": "1BxfuPKGuaTgP7aM0Bbdwr",
+        "artist_id": 9
+    }
+
+
+]

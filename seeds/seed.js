@@ -1,9 +1,12 @@
 const sequelize = require('../config/connection');
-const { User, Blog, Comment } = require('../models');
+const { User, Playlist, Comment, Artist, Song, PlaylistSong } = require('../models');
 
 const userData = require('./userData.json');
-const blogData = require('./blogData.json');
+const playlistData = require('./playlistData.json');
 const commentData = require('./commentData.json');
+const artistData = require('./artistData.json');
+const songData = require('./songData.json');
+const playlistsongData = require('./playlistsongData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -13,9 +16,20 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const blog of blogData) {
-    await Blog.create({
-      ...blog,
+  const artists = await Artist.bulkCreate(artistData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  const songs = await Song.bulkCreate(songData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+
+  for (const playlist of playlistData) {
+    await Playlist.create({
+      ...playlist,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
@@ -26,6 +40,12 @@ const seedDatabase = async () => {
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
+
+  const playlistsongs = await PlaylistSong.bulkCreate(playlistsongData, {
+    individualHooks: true,
+    returning: true,
+  });
+
 
   process.exit(0);
 };

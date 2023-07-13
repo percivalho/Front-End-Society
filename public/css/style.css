@@ -40,10 +40,13 @@ section {
 }
 
 .sample-img {
-  background-color: #fff;
-  width: 100%;
+  background-color: #fff5f5;
+  width: 50%;
   padding: 0;
-  border: 5px solid black;
+  border: 1px solid #B6207F;
+  border-radius:25px;
+  align-items: center;
+  margin: auto;
 }
 
 .sample-img p {
@@ -58,7 +61,7 @@ section {
 
 /* Make the submit button stretch to both sides */
 .sample-img .form-group button {
-  width: 100%;
+  width: 20%;
 }
 
 
@@ -67,14 +70,16 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;    
-  background-color: #13293d; /* Background color for the header */
-  color: #fff; /* Font color for the header */
-  padding: 10px;  
+  background-color: #B6207F; /* Background color for the header */
+  color: #ffffff; /* Font color for the header */
+  padding: 20px;
+  text-align: center; 
 }
 
 .title h2 {
-  margin: 0;
   font-size: 30px; 
+  text-align: center;
+  margin: auto;
 }
 
 .title p{
@@ -87,11 +92,13 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .sample-img label {
   font-weight: bold;
   margin-bottom: 5px;
+  color: #B6207F ;
 }
 
 .sample-img input[type="text"],
@@ -111,7 +118,7 @@ section {
 
 /* effect on button hover */
 .sample-img input[type="submit"]:hover {
-  background-color: #1e3d5a;
+  background-color: #bb8588;
 }
 
 .sample-img p {
@@ -147,7 +154,7 @@ section {
 
 /* effect on hover on button*/
 .new-post-button:hover {
-  background-color: #1e3d5a;
+  background-color: #bb8588;
 }
 
 /* default: no underline for <a> link*/
@@ -171,6 +178,42 @@ a {
 .input-container {
   display: flex;
   justify-content: center;  
+}
+
+.btn{
+  background-color: #bb8588;
+}
+.btn.btn-primary {
+  border: none;
+  background-color: #B6207F;
+  border-radius: 25px;
+  border-bottom: 1px solid #000000;
+  box-shadow: 2px 2px 2px #bb8588;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  line-height: 22px;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+.btn.btn-primary:hover {
+  background-color: #EF2766;
+}
+
+.btn:hover {
+  border-bottom: 2px solid #EF2766;
+  box-shadow: 2px 2px 2px #B6207F ;
+  opacity: 0.7;
+}
+p {
+  font-size: 1.1rem;
+  margin: 0 0 3rem;
+  color: #000000;
+  margin-top: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 1px;
 }
 
 @media screen and (max-width: 768px) {

@@ -10,13 +10,13 @@ body {
 header {
   padding: 20px;
   text-align: center;
-  background: #13293d;
+  background: #ffffff;
   color: #fff;
 }
 
 nav {
   display: flex;
-  background: #13293d;
+  background: #B6207F;
 }
 
 nav a {
@@ -142,6 +142,8 @@ section {
   border: none;
   cursor: pointer;
 }
+
+
 
 /* effect on hover on button*/
 .new-post-button:hover {

@@ -5,12 +5,17 @@
 body {
   font-family: Arial;
   margin: 0;
+  background-image: linear-gradient(60deg, rgb(208, 5, 130),white, rgb(241, 98, 16));
 }
-
+.logo{
+  display:flex;
+  margin-left: auto;
+  margin-right: auto;
+}
 header {
   padding: 20px;
   text-align: center;
-  background: #ffffff;
+  /* background: #ffffff; */
   color: #fff;
 }
 
@@ -35,12 +40,12 @@ main {
 
 section {
   flex: 3;
-  background-color: #fff;
+  /* background-color: #fff; */
   padding: 20px;
 }
 
 .sample-img {
-  background-color: #fff5f5;
+  background-color: #fff5f543;
   width: 50%;
   padding: 0;
   border: 1px solid #B6207F;
@@ -113,7 +118,7 @@ section {
 .sample-img input[type="submit"] {
   padding: 8px 16px;
   background-color: #13293d;
-  color: #fff;
+  color: #ffffff7d;
   border: none;
   cursor: pointer;
 }

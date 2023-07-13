@@ -74,6 +74,8 @@ section {
   color: #ffffff; /* Font color for the header */
   padding: 20px;
   text-align: center; 
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
 .title h2 {

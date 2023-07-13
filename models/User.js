@@ -27,6 +27,10 @@ User.init(
         len: [8],
       },
     },
+    sound: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    }
   },
   {
     hooks: {

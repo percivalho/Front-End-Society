@@ -1,0 +1,50 @@
+[
+
+  {
+    "id": 1,
+    "title": "Ed Sheeran playlist",
+    "user_id": 1
+  },
+  {
+    "id": 2,
+    "title": "Coding Soundtrack",
+    "user_id": 2
+
+  },
+  {
+    "id": 3,
+    "title": "Pop Hits",
+    "user_id": 3
+
+  },
+  {
+    "id": 4,
+    "title": "Country Classics",
+    "user_id": 4
+
+  },
+  {
+    "id": 5,
+    "title": "Hip Hop Vibes",
+    "user_id": 1
+
+  },
+  {
+    "id": 6,
+    "title": "Jazz Lounge",
+    "user_id": 2
+
+  },
+  {
+    "id": 7,
+    "title": "Electronic Beats",
+    "user_id": 3
+
+  },
+  {
+    "id": 8,
+    "title": "Classics",
+    "user_id": 4
+
+  }
+]

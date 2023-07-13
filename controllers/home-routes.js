@@ -1,28 +1,44 @@
 const router = require('express').Router();
-const { Blog, Comment, User } = require('../models');
+const { User, Playlist, Comment, Artist, Song, PlaylistSong } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET all blogs for homepage
 router.get('/', async (req, res) => {
   try {
-    const dbBlogData = await Blog.findAll({
+    const dbPlaylistData = await Playlist.findAll({
       include: [
         {
           model: Comment,
         },
         {
           model: User,
-        }
+        },
+        {
+          model: Song,
+          through: PlaylistSong,
+          as: 'songs',
+          include: [
+            {
+              model: Artist,
+              as: 'artist',
+            },
+          ],
+        },
       ],
       order: [['createdAt', 'DESC']],      
     });
 
-    const blogs = dbBlogData.map((blog) =>
-      blog.get({ plain: true })
+    const playlists = dbPlaylistData.map((playlist) =>
+      playlist.get({ plain: true })
     );
+    console.log(playlists);
+    console.log(playlists[0].songs);
+    console.log(req.session);
     res.render('homepage', {
-      blogs,
+      playlists,
       loggedIn: req.session.loggedIn,
+      username: req.session.username,
+      sound: req.session.sound,
     });
   } catch (err) {
     console.log(err);
@@ -31,10 +47,10 @@ router.get('/', async (req, res) => {
 });
 
 // GET one blog only, and by id
-router.get('/blog/:id', withAuth, async (req, res) => {
+router.get('/playlist/:id', withAuth, async (req, res) => {
   // If the user is logged in, allow them to view the blog
   try {
-    const dbBlogData = await Blog.findByPk(req.params.id, {
+    const dbPlaylistData = await Playlist.findByPk(req.params.id, {
       include: [
         {
           model: Comment,
@@ -45,13 +61,19 @@ router.get('/blog/:id', withAuth, async (req, res) => {
             },
           ],
         },
+        {
+          model: Song,
+          through: PlaylistSong,
+          as: 'songs',
+        },
       ],
     });
-    if (dbBlogData){
-      const blog = dbBlogData.get({ plain: true });
-      res.render('blog', { blog, loggedIn: req.session.loggedIn });
+    if (dbPlaylistData){
+      const playlist = dbPlaylistData.get({ plain: true });
+      console.log(playlist);
+      res.render('playlist', { playlist, loggedIn: req.session.loggedIn });
     } else {
-      res.status(404).json({ message: 'No Blog found with that id!' });
+      res.status(404).json({ message: 'No Playlist found with that id!' });
       return;
     }
   } catch (err) {
@@ -61,7 +83,7 @@ router.get('/blog/:id', withAuth, async (req, res) => {
 });
 
 // Post Comment on a blog post
-router.post('/api/blog/:id', withAuth, async (req, res) => {
+router.post('/api/playlist/:id', withAuth, async (req, res) => {
 
   try {
     // retrieve the user.id from username
@@ -104,22 +126,37 @@ router.get('/myPlaylist', withAuth, async (req, res) => {
         username: req.session.username,
       },
     });
-
+    
     if (dbUserData.id) {
       try {
-        const dbBlogData = await Blog.findAll({
+        const dbPlaylistData = await Playlist.findAll({
           where: {
             user_id: dbUserData.id,
           },
-          order: [['createdAt', 'DESC']], 
+          order: [['createdAt', 'DESC']],
+          include: [
+            {
+              model: Song,
+              through: PlaylistSong,
+              as: 'songs',
+              include: [
+                {
+                  model: Artist,
+                  as: 'artist'
+                }
+              ]
+            },
+          ]
         });
-        let blogs ={};
-        if (dbBlogData){
-          blogs = dbBlogData.map((blog) =>
-            blog.get({ plain: true })
+    
+        let playlists ={};
+        if (dbPlaylistData){
+          playlists = dbPlaylistData.map((playlist) =>
+            playlist.get({ plain: true })
           );
         }
-        res.render('myPlaylist', { blogs, loggedIn: req.session.loggedIn });
+        console.log(playlists);
+        res.render('myPlaylist', { playlists, loggedIn: req.session.loggedIn });
       } catch (err) {
         console.log(err);
         res.status(500).json(err);

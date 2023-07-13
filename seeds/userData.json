@@ -1,18 +1,28 @@
 [
   {
-    "username": "Sal",
-    "password": "password12345"
+    "username": "john.doe",
+    "password": "12345678",
+    "sound": "Ping2.mp3"
   },
   {
     "username": "Lernantino",
-    "password": "password12345"
+    "password": "password12345",
+    "sound": "Ping2.mp3"
   },
   {
     "username": "Amiko",
-    "password": "password12345"
+    "password": "password12345",
+    "sound": "Ping1.mp3"
+
   },
   {
     "username": "David",
-    "password": "david123"
-  }  
+    "password": "david123",
+    "sound": "Ping2.mp3"
+  },
+  {
+    "username": "Sal",
+    "password": "password12345",
+    "sound": "Ping1.mp3"
+  }
 ]

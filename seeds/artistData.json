@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Ed Sheeran" 
+    },
+    {
+        "id": 2,
+        "name": "Billie Eilish" 
+    },
+    {
+        "id": 3,
+        "name": "Ariana Grande" 
+    },
+    {
+        "id": 4,
+        "name": "Dua Lipa"
+    },
+    {
+        "id": 5,
+        "name": "Harry Styles"
+    },
+    {
+        "id": 6,
+        "name": "The Weeknd"
+    },
+    {
+        "id": 7,
+        "name": "Olivia Rodrigo"
+    },
+    {
+        "id": 8,
+        "name": "Post Malone"
+    },
+    {
+        "id": 9,
+        "name": "Taylor Swift"
+    },
+    {
+        "id": 10,
+        "name": "Justin Bieber"
+    },
+    {
+        "id": 11,
+        "name": "One Direction"
+    },
+    {
+        "id": 12,
+        "name": "Lewis Capaldi"
+    }    
+]

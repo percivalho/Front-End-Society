@@ -1,18 +1,21 @@
 const User = require('./User');
-const Blog = require('./Blog');
+const Playlist = require('./Playlist');
 const Comment = require('./Comment');
+const Artist = require('./Artist');
+const Song = require('./Song');
+const PlaylistSong = require('./PlaylistSong');
 
-User.hasMany(Blog, {
+User.hasMany(Playlist, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
-Blog.belongsTo(User, {
+Playlist.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-Blog.hasMany(Comment, {
-  foreignKey: 'blog_id',
+Playlist.hasMany(Comment, {
+  foreignKey: 'playlist_id',
   onDelete: 'CASCADE',  
 });
 
@@ -22,12 +25,36 @@ User.hasMany(Comment, {
 });
 
 
-Comment.belongsTo(Blog, {
-  foreignKey: 'blog_id',
+Comment.belongsTo(Playlist, {
+  foreignKey: 'playlist_id',
 });
 
 Comment.belongsTo(User, {
   foreignKey: 'user_id' 
 });
 
-module.exports = { User, Blog, Comment };
+Artist.hasMany(Song, {
+  foreignKey: 'artist_id',
+  onDelete: 'CASCADE'
+});
+
+Song.belongsTo(Artist, {
+  foreignKey: 'artist_id'
+});
+
+
+// Products belongToMany Tags (through ProductTag)
+Playlist.belongsToMany(Song, {
+  through: PlaylistSong,
+  foreignKey: 'playlist_id'
+});
+
+// Tags belongToMany Products (through ProductTag)
+Song.belongsToMany(Playlist, {
+  through: PlaylistSong,
+  foreignKey: 'song_id'
+});
+
+
+
+module.exports = { User, Playlist, Comment, Artist, Song, PlaylistSong };

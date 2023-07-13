@@ -1,9 +1,9 @@
 <section class="card">
-  <header>{{blog.title}}</header>
+  <header>{{playlist.title}}</header>
   <p>{{blog.description}}</p>
 </section>
 
-{{#each blog.comments as |comment|}}
+{{#each playlist.comments as |comment|}}
 {{> comment-details}}
 {{/each}}
 

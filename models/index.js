@@ -4,6 +4,7 @@ const Comment = require('./Comment');
 const Artist = require('./Artist');
 const Song = require('./Song');
 const PlaylistSong = require('./PlaylistSong');
+const Soundfile = require('./Soundfile');
 
 User.hasMany(Playlist, {
   foreignKey: 'user_id',
@@ -55,6 +56,10 @@ Song.belongsToMany(Playlist, {
   foreignKey: 'song_id'
 });
 
+/*User.hasOne(Soundfile, {
+  foreignKey: 'soundfile_id',
+  onDelete: 'CASCADE'
+});*/
 
 
-module.exports = { User, Playlist, Comment, Artist, Song, PlaylistSong };
+module.exports = { User, Playlist, Comment, Artist, Song, PlaylistSong, Soundfile };

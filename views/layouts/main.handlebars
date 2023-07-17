@@ -21,16 +21,19 @@
       {{else}}
       <a href="/login">Login</a>
       {{/if}}
-      <p> Hi, {{username}}</p>
-
+      {{#if loggedIn}}
+      <p>hi, {{username}}</p>
+      {{/if}}
     </nav>
 
     <header>
-      <h1>The Tech Blog</h1>
-      <audio autoplay>
-          <!--source src="./assets/{{sound}}" type="audio/mpeg"-->
+      <h1>The Tech Blog </h1>
+      <script>
+        window.sound = `{{sound}}`;
+      </script>
+      <!--audio autoplay>
           <source src="./assets/{{sound}}" type="audio/mpeg">
-      </audio>      
+      </audio-->      
 
     </header>
 
@@ -42,6 +45,9 @@
     {{#if loggedIn}}
     <script src="/js/logout.js"></script>
     {{/if}}
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 
 </html>

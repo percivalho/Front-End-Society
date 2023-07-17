@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 
 body {
@@ -10,13 +10,13 @@ body {
 header {
   padding: 20px;
   text-align: center;
-  background: #ffffff;
+  background: #13293d;
   color: #fff;
 }
 
 nav {
   display: flex;
-  background: #B6207F;
+  background: #13293d;
 }
 
 nav a {
@@ -34,24 +34,21 @@ main {
 
 
 section {
-  flex: 3;
+  flex: 1;
   background-color: #fff;
   padding: 20px;
 }
 
 .sample-img {
-  background-color: #fff5f5;
-  width: 50%;
+  background-color: #fff;
+  width: 100%;
   padding: 0;
-  border: 1px solid #B6207F;
-  border-radius:25px;
-  align-items: center;
-  margin: auto;
+  /*border: 5px solid black;*/
 }
 
 .sample-img p {
-  padding-left: 20px; /* Add padding to the left side */
-  margin-bottom:10px;  
+  /*padding-left: 20px; /* Add padding to the left side */
+  /*margin-bottom:10px;  */
 }
 
 /* Make the textarea stretch to both sides */
@@ -61,27 +58,35 @@ section {
 
 /* Make the submit button stretch to both sides */
 .sample-img .form-group button {
-  width: 20%;
+  width: 100%;
 }
 
-
+button {
+  border: none;
+}
 /* that is the title bar, white font and dark blue background*/
-.title {
+/*title {
   display: flex;
   justify-content: space-between;
   align-items: center;    
-  background-color: #B6207F; /* Background color for the header */
-  color: #ffffff; /* Font color for the header */
-  padding: 20px;
-  text-align: center; 
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  background-color: #13293d; 
+  color: #fff; 
+  padding: 10px;  
+}*/
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #13293d; /* Background color for the header */
+  color: #fff; /* Font color for the header */
+  padding: 10px;  
 }
 
+
 .title h2 {
+  margin: 0;
   font-size: 30px; 
-  text-align: center;
-  margin: auto;
 }
 
 .title p{
@@ -94,13 +99,11 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .sample-img label {
   font-weight: bold;
   margin-bottom: 5px;
-  color: #B6207F ;
 }
 
 .sample-img input[type="text"],
@@ -120,11 +123,11 @@ section {
 
 /* effect on button hover */
 .sample-img input[type="submit"]:hover {
-  background-color: #bb8588;
+  background-color: #1e3d5a;
 }
 
 .sample-img p {
-  margin-top: 10px;
+  /*margin-top: 10px;*/
 }
 
 .sample-img a {
@@ -140,29 +143,39 @@ section {
   width: 100%;
 }
 
-/* new post button on the lower right-hand corner*/
-.new-post-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: #13293d;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-
-
 /* effect on hover on button*/
 .new-post-button:hover {
-  background-color: #bb8588;
+  background-color: #1e3d5a;
 }
 
 /* default: no underline for <a> link*/
 a {
   text-decoration: none;
 }
+
+.playlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
+
+.song-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
+
+.mysong-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.card {
+  flex: 0 0 30%; 
+  margin: 10px; 
+}
+
 
 .card a {
   text-decoration: none;
@@ -182,61 +195,112 @@ a {
   justify-content: center;  
 }
 
-.btn{
-  background-color: #bb8588;
-}
-.btn.btn-primary {
-  border: none;
-  background-color: #B6207F;
-  border-radius: 25px;
-  border-bottom: 1px solid #000000;
-  box-shadow: 2px 2px 2px #bb8588;
-  color: hsl(0, 0%, 100%);
-  display: inline-block;
-  line-height: 22px;
-  text-align: center;
-  cursor: pointer;
-
+/* this part for my playlist */
+.content-wrapper {
+  display: flex;
 }
 
-.btn.btn-primary:hover {
-  background-color: #EF2766;
+/* search aside section*/
+.search {
+  width: 30%; 
+  margin-right: 2%; 
 }
 
-.btn:hover {
-  border-bottom: 2px solid #EF2766;
-  box-shadow: 2px 2px 2px #B6207F ;
-  opacity: 0.7;
+/* this one for public playlist on songs*/
+.card1{
+  width:100%;
 }
-p {
-  font-size: 1.1rem;
-  margin: 0 0 3rem;
-  color: #000000;
-  margin-top: 10px;
-  font-weight: bold;
-  border-radius: 5px;
-  padding: 1px;
+
+/* this one for myplaylist on songs as there is aside that use 30% .search*/
+.mycard {
+  width: 68%; 
 }
+
+/* to control display and hidden for myplaylist/search result*/
+.visible {
+  display: block;
+}
+
+/* to control display and hidden for myplaylist/search result*/
+.hidden {
+  display: none;
+}
+
+
+/* this part for mysong-details*/
+.mysong-section {
+  flex: 1;
+  background-color: #fff;
+  padding:0;
+  
+}
+.media-container {
+  width:100%;
+  height:100%;
+  display: flex;
+  align-items: center;  /* Vertically aligns items in the center */
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the elements horizontally. */
+  justify-content: center; /* Center the elements vertically. */
+  width: 100%; 
+  height: 100%;
+}
+
+.detail iframe,
+.detail .playlist-add {
+  display: inline-block; /* Display these elements inline. */
+}
+
+.adjust-button {
+  position: relative;
+  top: -10px; /* Adjust this value as needed to move the button up */
+}
+
+
+
+
+
+
+
 
 @media screen and (max-width: 768px) {
   /* Use flex-direction to stack the navbar, sidebar, and body */
+  nav,
   main,
-  nav {
+  .content-wrapper {
     flex-direction: column;
   }
-  /* Make the sidebar stack below the body */
-  aside {
-    order: 2;
+
+  /* Change the styling of the nav links to be full width */
+  nav a {
+    display: block;
+    width: 100%;
   }
-  /* Change the header background */
-  header {
-    background: #772014;
+
+  /* Adjust the playlist and search sections to be full width */
+  .mycard, .search {
+    width: 100%;
   }
-  /* Change the navbar and footer background */
-  nav,
-  footer {
-    background-color: #bb8588;
+
+  /* Adjust the detail and media-container classes within the playlist section */
+  .detail, .media-container {
+    width: 100%;
   }
+
+  /* Set iframe width to 100% */
+  iframe {
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    .card {
+      flex: 0 0 45%;
+    }
+  }  
 }
+
 
 

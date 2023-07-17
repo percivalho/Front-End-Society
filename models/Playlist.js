@@ -23,6 +23,15 @@ Playlist.init(
         key: "id",
       },
     },
+    imagelink: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    public: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    }
+
   },
   {
     sequelize,

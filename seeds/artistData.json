@@ -46,5 +46,219 @@
     {
         "id": 12,
         "name": "Lewis Capaldi"
-    }    
+    },
+    {
+        "id": 13,
+        "name": "Ellie Goulding"
+    },
+    {
+        "id": 14,
+        "name": "Olivia Rodrigo"
+    },
+    {
+        "id": 15,
+        "name": "Rema"
+    },
+    {
+        "id": 16,
+        "name": "Miley Cyrus"
+    },
+    {
+        "id": 17,
+        "name": "Rihanna"
+    },
+    {
+        "id": 18,
+        "name": "Adele"
+    },
+    {
+        "id": 19,
+        "name": "Katy Perry"
+    },
+    {
+        "id": 20,
+        "name": "Amy Winehouse"
+    },
+    {
+        "id": 21,
+        "name": "Lady Gaga"
+    },
+    {
+        "id": 22,
+        "name": "David Guetta"
+    },
+    {
+        "id": 23,
+        "name": "Eagles"
+    },
+    {
+        "id": 24,
+        "name": "AC/DC"
+    },
+    {
+        "id": 25,
+        "name": "Journey"
+    },
+    {
+        "id": 26,
+        "name": "Queen"
+    },
+    {
+        "id": 27,
+        "name": "Rudimental"
+    },
+    {
+        "id": 28,
+        "name": "Mark Ronson"
+    },
+    {
+        "id": 29,
+        "name": "Justin Timberlake"
+    },
+    {
+        "id": 30,
+        "name": "Luis Fonsi"
+    },
+    {
+        "id": 31,
+        "name": "Carly Rae Jepsen"
+    },
+    {
+        "id": 32,
+        "name": "Psy"
+    },
+    {
+        "id": 33,
+        "name": "Ke$ha"
+    },
+    {
+        "id": 34,
+        "name": "Shakira"
+    },
+    {
+        "id": 35,
+        "name": "Black Eyes Pea"
+    },
+    {
+        "id": 36,
+        "name": "Snoop Dogg feat. Pharrell Williams"
+    },
+    {
+        "id": 37,
+        "name": "Jay-Z feat. Alicia Keys"
+    },
+    {
+        "id": 38,
+        "name": "Jay-Z feat. Rihanna and Kanye West"
+    },    
+    {
+        "id": 39,
+        "name": "Eminem"
+    },    
+    {
+        "id": 40,
+        "name": "Flo Rida feat. T-Pain"
+    },
+    {
+        "id": 41,
+        "name": "Kanye West"
+    },
+    {
+        "id": 42,
+        "name": "Whitney Houston"
+    },
+    {
+        "id": 43,
+        "name": "Michael Jackson"
+    },
+    {
+        "id": 44,
+        "name": "Stevie Wonder"
+    },
+    {
+        "id": 45,
+        "name": "The Jackson 5"
+    },    
+    {
+        "id": 46,
+        "name": "Etta James"
+    },    
+    {
+        "id": 47,
+        "name": "Jonas Brothers"
+    },     
+    {
+        "id": 48,
+        "name": "Kylie Minogue"
+    },     
+    {
+        "id": 49,
+        "name": "Niall Horan"
+    },     
+    {
+        "id": 50,
+        "name": "Switch Disco & Ella Henderson"
+    },     
+    {
+        "id": 51,
+        "name": "Tom Grennan"
+    },     
+    {
+        "id": 52,
+        "name": "Bon Jovi"
+    },     
+    {
+        "id": 53,
+        "name": "U2"
+    },     
+    {
+        "id": 54,
+        "name": "Spice Girls"
+    },     
+    {
+        "id": 55,
+        "name": "Backstreet Boys"
+    },     
+    {
+        "id": 56,
+        "name": "Britney Spears"
+    },     
+    {
+        "id": 57,
+        "name": "Celine Dion"
+    },     
+    {
+        "id": 58,
+        "name": "Ricky Martin"
+    },     
+    {
+        "id": 59,
+        "name": "Christina Aguilera"
+    },     
+    {
+        "id": 60,
+        "name": "Westlife"
+    },     
+    {
+        "id": 61,
+        "name": "Coldplay"
+    },     
+    {
+        "id": 62,
+        "name": "Beyoncé featuring Jay-Z"
+    },     
+    {
+        "id": 63,
+        "name": "BTS"
+    },     
+    {
+        "id": 64,
+        "name": "FIFTY FIFTY"
+    },
+    {
+        "id": 65,
+        "name": "AQUA"
+    }
+
+
 ]

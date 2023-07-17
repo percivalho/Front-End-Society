@@ -1,50 +1,122 @@
 [
-
   {
     "id": 1,
-    "title": "Ed Sheeran playlist",
-    "user_id": 1
+    "title": "Ed Sheeran's Top Hits",
+    "user_id": 1,
+    "imagelink": "edsheeran.jpg",
+    "public": 1
   },
   {
     "id": 2,
     "title": "Coding Soundtrack",
-    "user_id": 2
+    "user_id": 2,
+    "imagelink": "",
+    "public": 0
 
   },
   {
     "id": 3,
     "title": "Pop Hits",
-    "user_id": 3
+    "user_id": 3,
+    "imagelink": "pop.jpg",
+    "public": 1
 
   },
   {
     "id": 4,
-    "title": "Country Classics",
-    "user_id": 4
+    "title": "UK Top 10",
+    "user_id": 4,
+    "imagelink": "UKtop10.jpg",
+    "public": 1
 
   },
   {
     "id": 5,
-    "title": "Hip Hop Vibes",
-    "user_id": 1
+    "title": "Classic Rock",
+    "user_id": 1,
+    "imagelink": "classrock.jpg",
+    "public": 1
 
   },
   {
     "id": 6,
-    "title": "Jazz Lounge",
-    "user_id": 2
+    "title": "Taylor Swift Eras Tour",
+    "user_id": 2,
+    "imagelink": "taylorswift.jpg",
+    "public": 1
 
   },
   {
     "id": 7,
-    "title": "Electronic Beats",
-    "user_id": 3
+    "title": "Adele's Heartfelt Ballads",
+    "user_id": 3,
+    "imagelink": "adele.png",
+    "public": 1
 
   },
   {
     "id": 8,
-    "title": "Classics",
-    "user_id": 4
+    "title": "Dance Party",
+    "user_id": 4,
+    "imagelink": "danceparty.jpeg",
+    "public": 1
 
+  },
+  {
+    "id": 9,
+    "title": "My Playlist",
+    "user_id": 5,
+    "imagelink": "",
+    "public": 0
+  },
+  {
+    "id": 10,
+    "title": "Hip Hop Classics",
+    "user_id": 1,
+    "imagelink": "ClassicHipHop.jpg",
+    "public": 0
+  },
+  {
+    "id": 11,
+    "title": "Old School R&B",
+    "user_id": 2,
+    "imagelink": "oldschoolR&B.jpg",
+    "public": 0
+  },
+  {
+    "id": 12,
+    "title": "New Songs",
+    "user_id": 3,
+    "imagelink": "newsongs.jpg",
+    "public": 0
+  },
+  {
+    "id": 13,
+    "title": "80s Hits",
+    "user_id": 4,
+    "imagelink": "80sHits.png",
+    "public": 0
+  },
+  {
+    "id": 14,
+    "title": "90s Hits",
+    "user_id": 1,
+    "imagelink": "90sHits.jpg",
+    "public": 0
+  },
+  {
+    "id": 15,
+    "title": "00s Hits",
+    "user_id": 1,
+    "imagelink": "00sHits.jpg",
+    "public": 0
+  },
+  {
+    "id": 16,
+    "title": "K-pop",
+    "user_id": 1,
+    "imagelink": "kpop.jpg",
+    "public": 0
   }
+
 ]

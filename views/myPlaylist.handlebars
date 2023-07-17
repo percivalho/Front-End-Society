@@ -1,33 +1,39 @@
-<audio autoplay>
+<!--audio autoplay>
     <source src="./assets/{{sound}}" type="audio/mpeg">
-</audio>
+</audio-->
 
-{{#each blogs as |blog|}}
-{{> myblog-details}}
-{{/each}}
+<div class="content-wrapper">
 
-<article class="sample-img d-none">
-    <div class="title">
-    <h2>Create new Post</h2>
-    </div>
-    <form class="form" id="create">
-    <div class="form-group">
-        <label for="title">Title:</label>
-        <textarea class="form-control" rows="1" id="title"></textarea>
-    </div>
-    <div class="form-group">
-        <label for="content">Content:</label>
-        <textarea class="form-control" rows="5" id="description"></textarea>
-    </div>
-    <div class="form-group">
-        <button class="btn btn-primary" type="submit">Create</button>
-    </div>
-    </form>            
-</article>
+    <!-- aside section: for searching -->
+    <aside class="search">
+        <div class="form-group">
+            <label for="search">Search for a song</label>
+            <input type="text" class="form-control" id="search">
+        </div>
+        <p class="search-message"></p>
+        <ul id="history" class="list-group col-12 p-0"></ul>        
+    </aside>
 
+    <!-- main section: for displaying My playlist -->
+    <section class="mycard visible">
+        <header>My Playlist</header>
+        <div class="mysong-container">
+            {{#each playlist.songs as |song|}}
+            {{> mysong-details}}
+            {{/each}}
+        </div>
+    </section>
 
-<section>
-      <button class="new-post-button">+ New Post</button>      
-</section>
+    <!-- main section: for displaying Search Result -->
+    <section class="myresult hidden">
+        <header>Search Result</header>
+        <div class="mysong-container">
+            {{#each songs as |song|}}
+            {{> song-details}}
+            {{/each}}
+        </div>
+    </section>
+
+</div>
 
 <script src="/js/myPlaylist.js"></script>

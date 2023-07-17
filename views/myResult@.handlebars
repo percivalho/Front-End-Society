@@ -1,0 +1,55 @@
+<audio autoplay>
+    <source src="./assets/{{sound}}" type="audio/mpeg">
+</audio>
+
+<!--{{#each blogs as |blog|}}
+{{> myblog-details}}
+{{/each}}-->
+<div class="content-wrapper">
+    <aside class="search">
+        <div class="form-group">
+            <label for="search">Search for a song</label>
+            <input type="text" class="form-control" id="search">
+        </div>
+        <div class="results">
+
+        </div>
+    </aside>
+
+    <section class="myresult">
+    <header>Search Result</header>
+    <!--p>{{blog.description}}</p-->
+    <div class="song-container">
+    {{#each songs as |song|}}
+    {{> song-details}}
+    {{/each}}
+    </div>
+    </section>
+
+</div>
+
+<!--article class="sample-img d-none">
+    <div class="title">
+    <h2>Create new Post</h2>
+    </div>
+    <form class="form" id="create">
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <textarea class="form-control" rows="1" id="title"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="content">Content:</label>
+        <textarea class="form-control" rows="5" id="description"></textarea>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Create</button>
+    </div>
+    </form>            
+</article-->
+
+
+<!--section>
+      <button class="new-post-button">+ New Post</button>      
+</section-->
+
+<!--script src="/js/myResult.js"></script-->

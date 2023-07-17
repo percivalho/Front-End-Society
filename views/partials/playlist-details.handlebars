@@ -2,17 +2,7 @@
   <a href="/playlist/{{id}}">
     <div class="title">
       <h2>{{title}} </h2>
-      <p>Posted by: {{user.username}} on {{format_date createdAt}}</p>
+      <img src="/assets/playlist/{{imagelink}}" width="100%" height="100%"/>
     </div>    
-    {{#each songs as |song|}}
-    <p>{{song.name}}</p>
-    <p>{{song.genre}}</p>
-    <p>{{song.artist.name}}</p>
-    <p>{{song.songlink}}</p>
-    <iframe src="https://open.spotify.com/embed/track/{{song.songlink}}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
-
-    {{/each}}    
-    <!--p>{{description}}</p-->
   </a>
 </section>

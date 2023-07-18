@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Ed Sheeran's Top Hits",
     "user_id": 1,
-    "imagelink": "edsheeran.jpg",
+    "imagelink": "EdSheeran.png",
     "public": 1
   },
   {
@@ -34,7 +34,7 @@
     "id": 5,
     "title": "Classic Rock",
     "user_id": 1,
-    "imagelink": "classrock.jpg",
+    "imagelink": "classicrock.png",
     "public": 1
 
   },
@@ -42,7 +42,7 @@
     "id": 6,
     "title": "Taylor Swift Eras Tour",
     "user_id": 2,
-    "imagelink": "taylorswift.jpg",
+    "imagelink": "TaylorSwift.png",
     "public": 1
 
   },
@@ -50,7 +50,7 @@
     "id": 7,
     "title": "Adele's Heartfelt Ballads",
     "user_id": 3,
-    "imagelink": "adele.png",
+    "imagelink": "Adele.jpg",
     "public": 1
 
   },
@@ -58,7 +58,7 @@
     "id": 8,
     "title": "Dance Party",
     "user_id": 4,
-    "imagelink": "danceparty.jpeg",
+    "imagelink": "danceparty.png",
     "public": 1
 
   },
@@ -73,50 +73,92 @@
     "id": 10,
     "title": "Hip Hop Classics",
     "user_id": 1,
-    "imagelink": "ClassicHipHop.jpg",
-    "public": 0
+    "imagelink": "ClassicHipHop.png",
+    "public": 1
   },
   {
     "id": 11,
     "title": "Old School R&B",
     "user_id": 2,
-    "imagelink": "oldschoolR&B.jpg",
-    "public": 0
+    "imagelink": "OldSchoolR&B.png",
+    "public": 1
   },
   {
     "id": 12,
     "title": "New Songs",
     "user_id": 3,
     "imagelink": "newsongs.jpg",
-    "public": 0
+    "public": 1
   },
   {
     "id": 13,
     "title": "80s Hits",
     "user_id": 4,
     "imagelink": "80sHits.png",
-    "public": 0
+    "public": 1
   },
   {
     "id": 14,
     "title": "90s Hits",
     "user_id": 1,
-    "imagelink": "90sHits.jpg",
-    "public": 0
+    "imagelink": "90sHits.png",
+    "public": 1
   },
   {
     "id": 15,
     "title": "00s Hits",
     "user_id": 1,
     "imagelink": "00sHits.jpg",
-    "public": 0
+    "public": 1
   },
   {
     "id": 16,
     "title": "K-pop",
     "user_id": 1,
-    "imagelink": "kpop.jpg",
-    "public": 0
+    "imagelink": "kpop.png",
+    "public": 1
+  },
+  {
+    "id": 17,
+    "title": "10s Hits",
+    "user_id": 1,
+    "imagelink": "10sHits.jpg",
+    "public": 1
+  },
+  {
+    "id": 18,
+    "title": "70s Hits",
+    "user_id": 1,
+    "imagelink": "70sHits.png",
+    "public": 1
+  },
+  {
+    "id": 19,
+    "title": "Love Songs",
+    "user_id": 1,
+    "imagelink": "LoveSongs.png",
+    "public": 1
+  },
+  {
+    "id": 20,
+    "title": "Relaxation Playlist",
+    "user_id": 1,
+    "imagelink": "relax.png",
+    "public": 1
+  },
+  {
+    "id": 21,
+    "title": "Sunday Chill",
+    "user_id": 1,
+    "imagelink": "SundayChill.png",
+    "public": 1
+  },
+  {
+    "id": 22,
+    "title": "Feeling Blue",
+    "user_id": 1,
+    "imagelink": "feelingblue.png",
+    "public": 1
   }
 
 ]

@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: Montserrat;
+  font-family: "montserrat";
   margin: 0;
   background-image: linear-gradient(60deg, rgba(208, 5, 130, 0.215),white, rgba(241, 98, 16, 0.174));
 }

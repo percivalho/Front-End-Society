@@ -5,22 +5,33 @@
 body {
   font-family: "montserrat";
   margin: 0;
+  background-image: linear-gradient(60deg, rgba(208, 5, 130, 0.215),white, rgba(241, 98, 16, 0.174));
+}
+
+.logo{
+  display:flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
 }
 
 header {
   padding: 20px;
   text-align: center;
-  background: #13293d;
-  color: #fff;
+  background: #ffffff;
+  color: #3d3a3a;
 }
 
 nav {
   display: flex;
-  background: #13293d;
+  background: #ffffffb0;
+  /* color: #3d3a3a; */
+  /* background-image: linear-gradient(60deg, rgba(208, 5, 130, 0.603),white, rgba(241, 98, 16, 0.347)); */
 }
 
 nav a {
-  color: #fff;
+  color: #393838;
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
@@ -34,15 +45,18 @@ main {
 
 
 section {
-  flex: 1;
-  background-color: #fff;
+  flex: 3;
+  background-color: #ffffff5d;
   padding: 20px;
 }
 
 .sample-img {
   background-color: #fff;
-  width: 100%;
+  width: 50%;
   padding: 0;
+  align-items: center;
+  margin: auto;
+  border-radius: 25px;
   /*border: 5px solid black;*/
 }
 
@@ -58,7 +72,7 @@ section {
 
 /* Make the submit button stretch to both sides */
 .sample-img .form-group button {
-  width: 100%;
+  width: 20%;
 }
 
 button {
@@ -73,17 +87,27 @@ button {
   color: #fff; 
   padding: 10px;  
 }*/
-.title {
+.login {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #13293d; /* Background color for the header */
+  /* background-color: #42444692; Background color for the header */
   color: #fff; /* Font color for the header */
-  padding: 10px;  
+  padding: 20px;  
+  background-color: #b62075;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
-
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #42444692; Background color for the header */
+  color: #2d2b2b;
+}
 .title h2 {
   margin: 0;
   font-size: 30px; 
@@ -115,7 +139,7 @@ button {
 
 .sample-img input[type="submit"] {
   padding: 8px 16px;
-  background-color: #13293d;
+  background-color: #313335c0;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -123,7 +147,7 @@ button {
 
 /* effect on button hover */
 .sample-img input[type="submit"]:hover {
-  background-color: #1e3d5a;
+  background-color: #b62075;
 }
 
 .sample-img p {
@@ -131,7 +155,7 @@ button {
 }
 
 .sample-img a {
-  color: #13293d;
+  color: #48494a68;
   text-decoration: none;
 }
 
@@ -145,7 +169,7 @@ button {
 
 /* effect on hover on button*/
 .new-post-button:hover {
-  background-color: #1e3d5a;
+  background-color: #4d4e50;
 }
 
 /* default: no underline for <a> link*/
@@ -260,33 +284,67 @@ a {
   top: -10px; /* Adjust this value as needed to move the button up */
 }
 
+.btn{
+  background-color: #BB8588;
+}
+.btn.btn-primary {
+  border: none;
+  background-color: #303030;
+  border-radius: 25px;
+  border-bottom: 1px solid #303030;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  line-height: 22px;
+  text-align: center;
+  cursor: pointer;
+}
+.btn.btn-primary:hover {
+  background-color: #B6207F;
+}
+.btn:hover {
+  box-shadow: 2px 2px 2px #B6207F ;
+}
+p {
+  font-size: 1.1rem;
+  margin: 0 0 3rem;
+  color: #000000;
+  margin-top: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 1px;
+}
+
+
 /* 404 page */
 
 .c404-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .c404-wrapper h1 {
-    font-size: 70px; /* adjust as needed */
-    margin-bottom: 10px; /* adjust as needed */
+  font-size: 70px; /* adjust as needed */
+  margin-bottom: 10px; /* adjust as needed */
 }
 
 .c404-wrapper h2 {
-    font-size: 50px; /* adjust as needed */
-    margin-bottom: 10px; /* adjust as needed */
+  font-size: 50px; /* adjust as needed */
+  margin-bottom: 10px; /* adjust as needed */
 }
 
 .c404-wrapper a {
-    font-size: 30px; /* adjust as needed */
+  font-size: 30px; /* adjust as needed */
 }
 
 
-
-
-
+@media screen and (max-width: 768px) {
+  .logo{
+    width: 100px;
+    height: 100px;
+  }
+}
 
 
 @media screen and (max-width: 768px) {

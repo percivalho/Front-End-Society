@@ -313,6 +313,28 @@ p {
 }
 
 
+/* 404 page */
+
+.c404-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.c404-wrapper h1 {
+  font-size: 70px; /* adjust as needed */
+  margin-bottom: 10px; /* adjust as needed */
+}
+
+.c404-wrapper h2 {
+  font-size: 50px; /* adjust as needed */
+  margin-bottom: 10px; /* adjust as needed */
+}
+
+.c404-wrapper a {
+  font-size: 30px; /* adjust as needed */
+}
 
 
 

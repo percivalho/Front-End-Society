@@ -25,6 +25,7 @@ router.post('/signup', async (req, res) => {
       req.session.loggedIn = true;
       req.session.username = req.body.username;
       req.session.sound = req.body.sound;
+      req.session.soundPlayed = 0;
 
       // redirect back to / after signup successfully
       res.redirect('/');        
@@ -65,6 +66,7 @@ router.post('/login', async (req, res) => {
       req.session.loggedIn = true;
       req.session.username = req.body.username;
       req.session.sound = dbUserData.sound;
+      req.session.soundPlayed = 0;
 
       // redirect to / on successful login
       res.redirect('/');        

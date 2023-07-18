@@ -10,7 +10,7 @@ const submitSearchHandler = async (event) => {
     searchTerm = event.target.textContent;
   }
   
-  console.log(searchTerm);
+  //console.log(searchTerm);
   if (searchTerm) {
     const response = await fetch(`/myResult/search?query=${searchTerm}`, {
       method: 'GET',
@@ -156,6 +156,7 @@ document.querySelector('#search').addEventListener('keypress', function (e) {
     console.log("key pressed");
     e.preventDefault(); // Prevents the default action
     submitSearchHandler(e); 
+    document.querySelector('#search').value = "";
   }
 });
 
@@ -176,9 +177,13 @@ async function addSongToPlaylist(event) {
   });
   let message = "";
   if (response.ok) {
-    message = `Song with id ${songId} added to playlist.`;
+    const data = await response.json();
+    const songName = data.song.name;
+    //message = `Song with id ${songId} added to playlist.`;
+    //message = `Song added to playlist.`;
+    message = `Song "${songName}" added to playlist.`;
   } else {
-    message = `Failed to add song id ${songId} to playlist.`;
+    message = `Failed to add song to playlist.`;
   }
   // Update the message element
   let messageElement = document.querySelector('#message' + `${songId}`); // Use the identifier to select the p element

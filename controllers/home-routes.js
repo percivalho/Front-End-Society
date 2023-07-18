@@ -73,6 +73,9 @@ router.get('/playlist/:id', withAuth, async (req, res) => {
       },
       include: [
         {
+          model: Comment,
+        },        
+        {
           model: Song,
           through: PlaylistSong,
           as: 'songs',
@@ -83,13 +86,15 @@ router.get('/playlist/:id', withAuth, async (req, res) => {
     if (dbPlaylistData){
       const playlist = dbPlaylistData.get({ plain: true });
       console.log(playlist);
+      //console.log(playlist.comments)
       res.render('playlist', { 
         playlist, 
         loggedIn: req.session.loggedIn,
         username: req.session.username,
       });
     } else {
-      res.status(404).json({ message: 'No Playlist found with that id!' });
+      res.render('404');
+      //res.status(404).json({ message: 'No Playlist found with that id!' });
       return;
     }
   } catch (err) {
@@ -293,6 +298,42 @@ router.delete('/myPlaylist/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// Post Comment on a playlist post
+router.post('/api/playlist/:id', withAuth, async (req, res) => {
+
+  try {
+    // retrieve the user.id from username
+    const dbUserData = await User.findOne({
+      where: {
+        username: req.session.username,
+      },
+    });
+
+    if (dbUserData.id) {
+      try {
+        const dbCommentData = await Comment.create({
+          playlist_id: req.params.id,
+          description: req.body.comment,
+          user_id: dbUserData.id
+        });
+        req.session.save(() => {
+          req.session.loggedIn = true;
+          req.session.username = req.session.username;
+    
+          res.status(200).json(dbCommentData);
+        });
+      } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 
 
 

@@ -9,7 +9,6 @@ router.post('/signup', async (req, res) => {
     const dbUserData = await User.create({
       username: req.body.username,
       password: req.body.password,
-      //sound: "Ping1.mp3",
       sound: req.body.sound,
     });
     console.log(dbUserData)

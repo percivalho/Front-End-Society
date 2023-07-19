@@ -38,12 +38,12 @@ const seedDatabase = async () => {
     returning: true,
   });  
 
-  /*for (const comment of commentData) {
+  for (const comment of commentData) {
     await Comment.create({
       ...comment,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
-  }*/
+  }
 
   const playlistsongs = await PlaylistSong.bulkCreate(playlistsongData, {
     individualHooks: true,

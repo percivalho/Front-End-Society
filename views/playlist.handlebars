@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="/css/bubble.css" />    
+
 <section class="card1">
   <header>{{playlist.title}}</header>
   <div class="mysong-container">
@@ -5,6 +7,9 @@
     {{> song-details}}
     {{/each}}
   </div>
+  <script>
+    window.comment1 = {{{commentsArrayString}}};
+  </script>
 </section>
 
 <article class="sample-img">

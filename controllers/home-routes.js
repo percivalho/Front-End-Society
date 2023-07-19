@@ -85,10 +85,19 @@ router.get('/playlist/:id', withAuth, async (req, res) => {
 
     if (dbPlaylistData){
       const playlist = dbPlaylistData.get({ plain: true });
+
+      // Map over the comments to get an array of descriptions
+      const commentsArray = playlist.comments.map(comment => comment.description);   
+      const commentsArrayString = JSON.stringify(commentsArray);    
+      console.log(playlist);
+      console.log(commentsArrayString);
+      //console.log(playlist.comments)
+
       console.log(playlist);
       //console.log(playlist.comments)
       res.render('playlist', { 
         playlist, 
+        commentsArrayString, 
         loggedIn: req.session.loggedIn,
         username: req.session.username,
       });

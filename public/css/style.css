@@ -44,6 +44,11 @@ nav a {
   text-align: center;
 }
 
+a:hover{
+    color: #b62075; 
+    text-decoration: none; 
+  } 
+
 .btn-nav {
   color: #393838;
   text-decoration: none;
@@ -53,13 +58,11 @@ nav a {
   background-color: #fff;
 }
 
-
 main {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-
 
 section {
   flex: 3;
@@ -86,7 +89,6 @@ section {
   border-radius: 25px;
   /*border: 5px solid black;*/
 }
-
 
 .sample-img p {
   /*padding-left: 20px; /* Add padding to the left side */
@@ -193,7 +195,8 @@ img {
 }
 
 .sample-img a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #b62075;
 }
 
 .full-width {
@@ -236,17 +239,19 @@ a {
   background-color: #30303000;
 }
 
-
 .card a {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s;
 }
 
-/* on hover: add underline*/
+h2:hover{
+  color: #b62075;
+}
+ /* on hover: add underline */
 .card a:hover {
-  color: green; 
-  text-decoration: underline; 
+  color: #b62075; 
+  text-decoration: none; 
 }
 
 /* for username and password, make them display center */
@@ -285,7 +290,6 @@ a {
 .hidden {
   display: none;
 }
-
 
 /* this part for mysong-details*/
 .mysong-section {
@@ -351,7 +355,6 @@ a {
   padding: 1px;
 }*/
 
-
 /* 404 page */
 
 .c404-wrapper {
@@ -375,14 +378,12 @@ a {
   font-size: 30px; /* adjust as needed */
 }
 
-
 @media screen and (max-width: 768px) {
   .logo{
     width: 100px;
     height: 100px;
   }
 }
-
 
 @media screen and (max-width: 768px) {
   /* Use flex-direction to stack the navbar, sidebar, and body */
@@ -397,6 +398,7 @@ a {
     display: block;
     width: 100%;
   }
+  n
 
   /* Adjust the playlist and search sections to be full width */
   .mycard, .search {
@@ -423,6 +425,3 @@ a {
     }
   }  
 }
-
-
-

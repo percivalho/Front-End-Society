@@ -10,7 +10,6 @@ router.get('/', async (req, res) => {
       where: {
         public: 1
       },      
-      //order: [['createdAt', 'DESC']],      
     });
 
     const playlistsAll = dbPlaylistData.map((playlist) =>
@@ -31,12 +30,6 @@ router.get('/', async (req, res) => {
     // Selecting the first 10 playlists after shuffle
     const playlists = playlistsAll.slice(0, 10);
 
-    // Check if soundPlayed or not. If so, set it to true and send soundPlay as true to the frontend
-    /*let soundPlay = false;
-    if (req.session.soundPlayed === false) {
-      req.session.soundPlayed = true;
-      soundPlay = true;
-    } */
     req.session.soundPlayed += 1;
 
 
@@ -57,15 +50,6 @@ router.get('/', async (req, res) => {
 router.get('/playlist/:id', withAuth, async (req, res) => {
   // If the user is logged in, allow them to view the public playlist
   try {
-    /*const dbPlaylistData = await Playlist.findByPk(req.params.id, {
-      include: [
-        {
-          model: Song,
-          through: PlaylistSong,
-          as: 'songs',
-        },
-      ],
-    });*/
     const dbPlaylistData = await Playlist.findOne({
       where: {
         id: req.params.id,
@@ -89,12 +73,7 @@ router.get('/playlist/:id', withAuth, async (req, res) => {
       // Map over the comments to get an array of descriptions
       const commentsArray = playlist.comments.map(comment => comment.description);   
       const commentsArrayString = JSON.stringify(commentsArray);    
-      console.log(playlist);
-      console.log(commentsArrayString);
-      //console.log(playlist.comments)
 
-      console.log(playlist);
-      //console.log(playlist.comments)
       res.render('playlist', { 
         playlist, 
         commentsArrayString, 
@@ -103,7 +82,6 @@ router.get('/playlist/:id', withAuth, async (req, res) => {
       });
     } else {
       res.render('404');
-      //res.status(404).json({ message: 'No Playlist found with that id!' });
       return;
     }
   } catch (err) {
@@ -182,15 +160,12 @@ router.get('/myResult/search', withAuth, async (req, res) => {
         }]
     }); 
 
-    console.log(dbSongData);     
     let songs ={};
     if (dbSongData){
       songs = dbSongData.map((song) =>
         song.get({ plain: true })
       );
     }
-    console.log(songs);
-    //res.render('myResult', { songs, loggedIn: req.session.loggedIn });
     res.json({ songs, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
@@ -203,7 +178,6 @@ router.get('/myResult/search', withAuth, async (req, res) => {
 router.post('/myPlaylist/addSong/:id', withAuth, async (req, res) => {
   try {
     const id = req.params.id;
-    await console.log(id);
     // retrieve the user.id from username
     console.log(req.session.username);
     const dbUserData = await User.findOne({
@@ -243,21 +217,6 @@ router.post('/myPlaylist/addSong/:id', withAuth, async (req, res) => {
         console.log(err);
         res.status(500).json(err);
       }
-        /*req.session.save(() => {
-          req.session.loggedIn = true;
-          req.session.username = req.session.username;    
-          res.status(200).json({
-            //dbPlaylistData);
-            playlist: dbPlaylistData,
-            song: dbSongData.get({ plain: true })
-          });            */
-          //res.render('myPlaylist', { playlists, loggedIn: req.session.loggedIn });
-
-        //});
-      /*} catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-      }*/
     }
   } catch (err) {
     console.log(err);
@@ -366,7 +325,6 @@ router.get('/signup', async (req, res) => {
       soundfile.get({ plain: true })
     );
 
-    console.log(soundfiles);
     res.render('signup', {soundfiles});
   }
 });

@@ -44,22 +44,18 @@ Song.belongsTo(Artist, {
 });
 
 
-// Products belongToMany Tags (through ProductTag)
+// Playlist belongToMany Song (through ProductTag)
 Playlist.belongsToMany(Song, {
   through: PlaylistSong,
   foreignKey: 'playlist_id'
 });
 
-// Tags belongToMany Products (through ProductTag)
+// Song belongToMany Playlist (through ProductTag)
 Song.belongsToMany(Playlist, {
   through: PlaylistSong,
   foreignKey: 'song_id'
 });
 
-/*User.hasOne(Soundfile, {
-  foreignKey: 'soundfile_id',
-  onDelete: 'CASCADE'
-});*/
 
 
 module.exports = { User, Playlist, Comment, Artist, Song, PlaylistSong, Soundfile };

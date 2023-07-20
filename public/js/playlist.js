@@ -26,13 +26,8 @@ async function addSongToPlaylist(event) {
     if (response.ok) {
       const data = await response.json();
       const songName = data.song.name;      
-      //console.log(response);
-      //message = `Song with id ${songId} added to playlist.`;
-      //message = `Song added to playlist.`;
-      message = `Song "${songName}" added to playlist.`;
-  
+      message = `Song "${songName}" added to playlist.`;  
     } else {
-      //message = `Failed to add song id ${songId} to playlist.`;
       message = `Failed to add song to playlist.`;
     }
     // Update the message element
@@ -108,10 +103,8 @@ function createBubble(size1, size2, offset1, offset2, text) {
     
 document.addEventListener("DOMContentLoaded", function() {
 
-  console.log(window.comment1);
   var bubbleArray = window.comment1;
 
-  console.log(bubbleArray);
   let delay = 1500; // 1.5 seconds delay
   let randomOffset = 500; // make it more random
 

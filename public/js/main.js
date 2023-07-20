@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
             autoplay: true 
         });
         message = soundSrc;
-        console.log(message);
         
         // Play the sound
         soundToPlay.play();

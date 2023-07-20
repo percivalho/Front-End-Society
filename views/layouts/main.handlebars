@@ -21,13 +21,13 @@
       {{!-- <a href="/">Home</a> --}}
       <a href="/myPlaylist"><i class="fa fa-fw fa-search"></i>My Playlist</a>
       {{#if loggedIn}}
-      <button id="logout" class="btn-no-style" style="background: #13293d; color: #fff;">Logout</button>
+      <button id="logout" class="btn-nav">Logout</button>
 
       {{else}}
       <a href="/login"><i class="fa fa-fw fa-user"></i>Login</a>
       {{/if}}
       {{#if loggedIn}}
-      <p>hi, {{username}}</p>
+      <p class="nav-p">hi, {{username}}</p>
       {{/if}}
     </nav>
     <iframe class='logo' src= "/assets/logo.svg" frameborder="0"></iframe>

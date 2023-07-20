@@ -326,7 +326,7 @@ h2:hover{
   cursor: pointer;
 }
 .btn.btn-primary:hover {
-  background-color: varF;
+  background-color: var(--purple);
 }
 .btn:hover {
   box-shadow: 2px 2px 2px var(--purple);

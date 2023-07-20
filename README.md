@@ -38,6 +38,11 @@ We incorporated authentication using express-session and cookies, guaranteeing p
 We adhered to the MVC paradigm for a well-structured folder hierarchy. Moreover, we followed best practices to maintain a clean code, and provide comprehensive comments for readability and maintainability.
 With our deployment on Heroku, access to our music website is available anytime, anywhere, while enjoying a responsive and polished UI that adapts seamlessly to your device.
 
+## Usage
+When the user opens this application, they are first presented with the homepage. This contains a navigation bar at the top of the page with links to the ‘Home’, ‘My Playlist’ and ‘Login’. When the user selects one of these options they will be redirected to the according page. The user will also see an animated logo at the top of every page. To create an account the user will have to click the ‘Sign up’ at the bottom of the login page. The user can enter their own username, password and select a sound from the drop-down list to play when they login to the site; to complete sign up the user must click the ‘sign up’ button. If the user already has an account, they can login by entering their username and correct password and select login; if the user enters the wrong username or password, they will be alerted that they have failed to login. In order to view the albums on the homepage or the ‘My Playlist’ a user must be logged in, if not they will be redirected to the login page. When login is successful the user will see ‘Hi’ followed by their username at the top of the website.
+In the home page, a list of randomised albums will appear, all of which have titles and accompanying images. By selecting on the album title or image, the user can then view all of the songs in the album and add them to their playlist with the plus button on the righthand side. When successfully added to their playlist, a message will appear below telling the user the song was added. The user will also be able to view comments written about the albums as bubbles floating on the screen. At the bottom of the page the user can add to these comments by entering their comment in the text box and clicking submit, after clicking submit the page will refresh and display all comments as bubbles including the new comment.
+If the user then selects the ‘My Playlist’ link in the navigation bar they will see all of the songs they have added to their own playlist. They will also have the option to remove songs by selecting the bin icon next to each song. On the left side of the page, the user will also be given the option to search for more songs by entering the song title or artist’s name and then clicking enter. The results will appear on the right side of the page with a list of the songs. The text the user enters will also appear on the search history below the search bar. This improves the user experience as its easy to click on and view their recent searches. After the user has finished searching for new songs, they can view their playlist again by either refreshing the page or clicking ‘my playlist’ again in the nav bar.
+
 ## Technologies Used
 
 This application is built using the following technologies:
@@ -53,6 +58,7 @@ This application is built using the following technologies:
 - **Handlebars Engine**
 - **CSS**
 - **JavaScript**
+- **SVGator**
 
 ## Link to webpage
 

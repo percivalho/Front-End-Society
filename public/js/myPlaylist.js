@@ -41,7 +41,7 @@ const submitSearchHandler = async (event) => {
 
           // Set the classes and attributes
           section.className = 'mysong-section';
-          article.className = 'sample-img';
+          article.className = 'play-sample-img';
           div.className = 'detail';
           div1.className = "media-container";
           pEl.classNmae = 'message';

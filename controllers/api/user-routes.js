@@ -5,13 +5,11 @@ const { User, Playlist } = require('../../models');
 router.post('/signup', async (req, res) => {
   try {
 
-    await console.log(req.body);  
     const dbUserData = await User.create({
       username: req.body.username,
       password: req.body.password,
       sound: req.body.sound,
     });
-    console.log(dbUserData)
     // Create a playlist for the user
     const dbPlaylistData = await Playlist.create({
       title: 'My Playlist',
@@ -60,7 +58,6 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password. Please try again!' });
       return;
     }
-    console.log(dbUserData)
     req.session.save(() => {
       req.session.loggedIn = true;
       req.session.username = req.body.username;

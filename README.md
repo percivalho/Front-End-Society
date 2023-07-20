@@ -2,16 +2,19 @@
 
 ## User Story
 
-As a user I want to be able to search for my favourite songs and albums. Once I find the album, I can then play the songs in the album or the snippet of the song that I searched for. Once I have found the song, then I can add it to my playlist, so that I can listen to them at a later date.
+```md
+As a user I want to be able to search for my favourite songs. Once I find through playlist or database, I can then play the snippet of the song that I searched for. Once I have found the song, then I can add it to my playlist, so that I can listen to them at a later date. I can add comments to public playlist.
+```
 
 ## Acceptance Criteria
 
+```md
 When I click on the login button
-Then I am presented with a page for me to register my login details such as username and password inorder to grant me access to the website
-When I search for a song or album
-Then I am provided with an image of the song and/or album art
-When I press the image button of the album
-Then a list of the songs in the album appears
+Then I am presented with a page for me to register my login details such as username and password in order to grant me access to the website
+When I search for a song
+Then I am provided with the search results and snippet of the song.
+When I press the image button of the playlist
+Then a list of the songs in the playlist appears
 When I click on the play button on the songslist
 Then the song begins to play
 When I click on the add to playlist button attached to the song
@@ -20,6 +23,7 @@ When I click on my playlist
 Then I am presented with the names of all the songs I have saved and I have the option to remove the songs from the playlist whenever I choose
 When I look at the website from multiple browsers
 Then I am presented with a responsive UI that looks good on all devices
+```
 
 ## Project Product Description
 
@@ -41,16 +45,23 @@ This application is built using the following technologies:
 - **Node.js**
 - **Express.js**
 - **Howler.js**
+- **bcrypt**
+- **Sequelize**
+- **dotenv**
 - **MySQL**
-- **Heroku**:
+- **Heroku**
 - **Handlebars Engine**
 - **CSS**
 - **JavaScript**
 
 ## Link to webpage
 
-Link to the deployed webpage on GitHub:
+```md
+Link to Heroku:
 
-```
+https://front-end-society-2d48b234d58b.herokuapp.com
 
+Link to GitHub repo:
+
+https://github.com/percivalho/Front-End-Society.git
 ```

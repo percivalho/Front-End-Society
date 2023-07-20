@@ -95,6 +95,7 @@ section {
 /* Make the textarea stretch to both sides */
 .sample-img .form-group textarea {
   width: 100%;
+  background-color: #fff;
 }
 
 /* Make the submit button stretch to both sides */
@@ -137,7 +138,7 @@ button {
 }
 .title h2 {
   margin: 0;
-  font-size: 30px; 
+  font-size: 25px; 
 }
 
 .title p{
@@ -145,6 +146,10 @@ button {
 
 }
 
+img {
+  border-style: none;
+  border-radius: 25px;
+}
 /* form stack column-wise*/
 .sample-img form {
   display: flex;
@@ -225,6 +230,9 @@ a {
 .card {
   flex: 0 0 30%; 
   margin: 10px; 
+  border-radius: 25px;
+  border-style: none;
+  background-color: #30303000;
 }
 
 
@@ -299,6 +307,7 @@ a {
   justify-content: center; /* Center the elements vertically. */
   width: 100%; 
   height: 100%;
+  background-color: #692f2f00;
 }
 
 .detail iframe,

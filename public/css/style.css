@@ -407,6 +407,11 @@ a {
       flex: 0 0 45%;
     }
   }  
+  @media screen and (max-width: 500px) {
+    .card {
+      flex: 0 0 100%;
+    }
+  }  
 }
 
 

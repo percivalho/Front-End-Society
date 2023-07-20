@@ -14,8 +14,7 @@ addButtons.forEach((button) => {
  */
 async function addSongToPlaylist(event) {
     const songId = event.target.getAttribute('data-id');
-    console.log(songId);
-  
+    
     const response = await fetch(`/myPlaylist/addSong/${songId}`, {
       method: 'POST',
       headers: {

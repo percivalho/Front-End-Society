@@ -10,7 +10,6 @@ const submitSearchHandler = async (event) => {
     searchTerm = event.target.textContent;
   }
   
-  //console.log(searchTerm);
   if (searchTerm) {
     const response = await fetch(`/myResult/search?query=${searchTerm}`, {
       method: 'GET',
@@ -57,7 +56,7 @@ const submitSearchHandler = async (event) => {
           button.innerText = '+';
           button.setAttribute('data-id', song.id); 
           button.addEventListener('click', addSongToPlaylist); // Add event listener
-          console.log(song.id);
+
           // Append the elements
           div1.appendChild(iframe); // Append iframe to the inner div
           div1.appendChild(button); // Append button to the inner div
@@ -78,7 +77,6 @@ const submitSearchHandler = async (event) => {
         saveHistory(searchTerm);        
       }
       else {
-        console.log('No songs found');
         let messageElement = document.querySelector(".search-message");
         messageElement.textContent = "No songs found!";
         setTimeout(function() {
@@ -153,7 +151,6 @@ function loadFromLocalStorage(){
 // when key pressed (and it is Enter!)
 document.querySelector('#search').addEventListener('keypress', function (e) {
   if (e.key === 'Enter') {
-    console.log("key pressed");
     e.preventDefault(); // Prevents the default action
     submitSearchHandler(e); 
     document.querySelector('#search').value = "";
@@ -167,7 +164,6 @@ document.querySelector('#search').addEventListener('keypress', function (e) {
  */
 async function addSongToPlaylist(event) {
   const songId = event.target.getAttribute('data-id');
-  console.log(songId);
 
   const response = await fetch(`/myPlaylist/addSong/${songId}`, {
     method: 'POST',
@@ -213,7 +209,6 @@ deleteButtons.forEach((button) => {
  */
 async function deleteSongFromPlaylist(event) {
   const songId = event.target.getAttribute('data-id');
-  console.log(songId);
 
   const response = await fetch(`/myPlaylist/${songId}`, {
     method: 'DELETE',

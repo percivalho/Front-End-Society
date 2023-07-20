@@ -144,9 +144,7 @@ router.get('/myPlaylist', withAuth, async (req, res) => {
 // Search for song in my myplaylist
 router.get('/myResult/search', withAuth, async (req, res) => {
   try {
-    console.log(req.query);
     let searchTerm = req.query.query;
-
 
     const dbSongData = await Song.findAll({
         where: {
@@ -179,7 +177,6 @@ router.post('/myPlaylist/addSong/:id', withAuth, async (req, res) => {
   try {
     const id = req.params.id;
     // retrieve the user.id from username
-    console.log(req.session.username);
     const dbUserData = await User.findOne({
       where: {
         username: req.session.username,
@@ -229,9 +226,7 @@ router.post('/myPlaylist/addSong/:id', withAuth, async (req, res) => {
 router.delete('/myPlaylist/:id', withAuth, async (req, res) => {
   try {
     const id = req.params.id;
-    await console.log(id);
     // retrieve the user.id from username
-    console.log(req.session.username);
     const dbUserData = await User.findOne({
       where: {
         username: req.session.username,
@@ -258,6 +253,7 @@ router.delete('/myPlaylist/:id', withAuth, async (req, res) => {
         }
         res.status(200).json(dbPlaylistSongData);
       } catch (err) {
+        console.log(err);
         res.status(500).json(err);
       }
     }

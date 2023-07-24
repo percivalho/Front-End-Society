@@ -60,6 +60,13 @@ This application is built using the following technologies:
 - **JavaScript**
 - **SVGator**
 
+
+## Credits
+
+- https://youtu.be/noC22oMVb44 - for the inspiration on the bubbles creation using css and vanilla javascript
+- Jason Sammon - provided great sound files for login sound choices.
+
+
 ## Link to webpage
 
 ```md

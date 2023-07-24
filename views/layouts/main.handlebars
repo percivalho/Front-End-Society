@@ -17,14 +17,13 @@
   </head>
   <body>
     <nav>
-      <a class="active"  href="/"><i class="fa fa-fw fa-home"></i>Home</a>
-      {{!-- <a href="/">Home</a> --}}
-      <a class="active" href="/myPlaylist"><i class="fa fa-fw fa-search"></i>My Playlist</a>
+      <a href="/"><i class="fa fa-fw fa-home"></i>Home</a>
+      <a href="/myPlaylist"><i class="fa fa-fw fa-search"></i>My Playlist</a>
       {{#if loggedIn}}
       <button id="logout" class="btn-nav"><i class="fa fa-fw fa-user"></i>Logout</button>
 
       {{else}}
-      <a class="active" href="/login"><i class="fa fa-fw fa-user"></i>Login</a>
+      <a  href="/login"><i class="fa fa-fw fa-user"></i>Login</a>
       {{/if}}
       {{#if loggedIn}}
       <p class="nav-p"> Hi, {{username}}</p>

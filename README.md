@@ -82,6 +82,12 @@ This application is built using the following technologies:
 - https://youtu.be/noC22oMVb44 - for the inspiration on the bubbles creation using css and vanilla javascript
 - Jason Sammon - provided great sound files for login sound choices.
 
+## Screenshots
+![A screenshot of the homepage](/public/assets/homepage.png)
+![A screenshot of the public playlists](/public/assets/album.png)
+![A screenshot of the login page](/public/assets/login.png)
+![A screenshot of the sign up page](/public/assets/signup.png)
+![A screenshot of the My Playlist page](/public/assets/myplaylist.png)
 
 ## Link to webpage
 
